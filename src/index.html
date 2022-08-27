@@ -1,131 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Form</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML Form</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
+  <body>
+    <h1 class="visually-hidden">HTML Form</h1>
+    <script type="text/javascript" src="./main.js"></script>
+    <form action="index.html" method="post">
+      <fieldset class="section">
+        <legend class="title">Personal information</legend>
+        <div class="container">
+          <label class="form-field">
+            Surname:
+            <input 
+              type="text" 
+              autocomplete="off" 
+              name="surname" 
+              required
+            >
+          </label>
 
-<body>
-  <h1 class="visually-hidden">HTML Form</h1>
-  <script type="text/javascript" src="./main.js"></script>
-  <form action="index.html" method="post">
+          <label class="form-field">
+            Name:
+            <input 
+              type="text" 
+              autocomplete="off" 
+              name="name" 
+              required
+            >
+          </label>
 
-    <fieldset class="section">
-      <legend class="title">
-        Personal information
-      </legend>
-      <div class="container">
-        <label class="form-field">
-          Surname:
-          <input type="text" autocomplete="off" name="surname" required>
-        </label>
+          <label class="form-field">
+            How old are You?
+            <input
+              type="number"
+              min="1"
+              max="100"
+              placeholder="12"
+              name="how old are you?"
+            >
+          </label>
 
-        <label class="form-field">
-          Name:
-          <input type="text" autocomplete="off" name="name" required>
-        </label>
+          <label class="form-field">
+            Full date of birth:
+            <input
+              type="date" 
+              name="full date of birth"
+            >
+          </label>
 
-        <label class="form-field">
-          How old are You?
-          <input type="number" min="1" max="100" placeholder="12" name="how old are you?">
-        </label>
+          <label class="form-field">
+            I accept the term of the agreement
+            <input 
+              type="checkbox" 
+              name="terms" 
+              required
+            >
+          </label>
+        </div>
+      </fieldset>
 
-        <label class="form-field">
-          Full date of birth:
-          <input type="date" name="full date of birth">
-        </label>
+      <fieldset class="section">
+        <legend class="title">Registration</legend>
+        <div class="container">
+          <label class="form-field">
+            Email:
+            <input 
+              type="email" 
+              placeholder="email@example.com" 
+              name="email"
+            >
+          </label>
 
-        <label class="form-field">
-          I accept the term of the agreement
-          <input type="checkbox" name="terms" required>
-        </label>
-      </div>
-    </fieldset>
+          <label class="form-field">
+            Password:
+            <input 
+              type="password" 
+              name="password" 
+              required 
+              minlength="8"
+            >
+          </label>
+        </div>
+      </fieldset>
 
-    <fieldset class="section">
-      <legend class="title">
-        Registration
-      </legend>
-      <div class="container">
-        <label class="form-field">
-          Email:
-          <input type="email" placeholder="email@example.com" name="email">
-        </label>
+      <fieldset class="section">
+        <legend class="title">An interesting fact about You!</legend>
+        <div class="container">
+          <label class="form-field">
+            Do you love cats?
+            <input 
+              type="radio" 
+              name="Yes" 
+              value="Y"
+            >
+            Yes
+            <input 
+              type="radio" 
+              name="No" 
+              value="N"
+            >
+            No
+          </label>
 
-        <label class="form-field">
-          Password:
-          <input type="password" name="password" required minlength="8">
-        </label>
-      </div>
-    </fieldset>
+          <label class="form-field">
+            What is your favorite color?
+            <input type="color" name="favorite color">
+          </label>
 
-    <fieldset class="section">
-      <legend class="title">
-        An interesting fact about You!
-      </legend>
-      <div class="container">
-        <label class="form-field">
-          Do you love cats?
-          <input type="radio" name="Yes" value="Y">
-          Yes
-          <input type="radio" name="No" value="N">
-          No
-        </label>
+          <label class="form-field">
+            What time do you go to bed?
+            <input type="time" name="what time do you go to bed">
+          </label>
 
-        <label class="form-field">
-          What is your favorite color?
-          <input type="color" name="favorite color">
-        </label>
+          <label class="form-field">
+            What are your favorite brand of cars?
+            <select id="cars" name="cars">
+              <option value="bmw">BMW</option>
+              <option value="audi">Audi</option>
+              <option value="ford">Ford</option>
+            </select>
+          </label>
 
-        <label class="form-field">
-          What time do you go to bed?
-          <input type="time" name="what time do you go to bed">
-        </label>
+          <label class="form-field">
+            How do you rate our work?
+            <input 
+              type="range" 
+              min="1" 
+              max="10" 
+              step="1" 
+              name="rate">
+          </label>
+        </div>
+      </fieldset>
 
-        <label class="form-field">
-          What are your favorite brand of cars?
-          <select id="cars" name="cars">
-            <option value="bmw">BMW</option>
-            <option value="audi">Audi</option>
-            <option value="ford">Ford</option>
-          </select>
-        </label>
+      <fieldset class="section">
+        <legend class="title">Additional info:</legend>
+        <div class="container">
+          <label class="form-field">
+            Comments:
+            <textarea name="feedback"></textarea>
+          </label>
 
-        <label class="form-field">
-          How do you rate our work?
-          <input type="range" min="1" max="10" step="1" name="rate">
-        </label>
-      </div>
-    </fieldset>
+          <label class="form-field">
+            Would you recommend us?
+            <input 
+              type="radio" 
+              name="Yes" 
+              value="Y" 
+            >
+            Yes
+            <input 
+              type="radio" 
+              name="No" 
+              value="N"
+            >
+            No
+          </label>
+        </div>
+      </fieldset>
 
-    <fieldset class="section">
-      <legend class="title">
-        Additional info:
-      </legend>
-      <div class="container">
-        <label class="form-field">
-          Comments:
-          <textarea name="feedback"></textarea>
-        </label>
-
-        <label class="form-field">
-          Would you recommend us?
-          <input type="radio" name="Yes" value="Y">
-          Yes
-          <input type="radio" name="No" value="N">
-          No
-        </label>
-      </div>
-    </fieldset>
-    
-    <button class="button" type="submit">Submit</button>
-    
-  </form>
-</body>
-
+      <button class="button" type="submit">Submit</button>
+    </form>
+  </body>
 </html>
